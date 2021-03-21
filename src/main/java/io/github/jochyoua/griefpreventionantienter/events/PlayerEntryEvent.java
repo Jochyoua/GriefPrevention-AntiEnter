@@ -42,12 +42,16 @@ public class PlayerEntryEvent implements Listener {
 
         // Checks if the player has container access, building access or permission access. Returns if any of these are true
         // You can disable any of these checks in the config under the "settings.claim permissions to check" path
-        if (claim.allowContainers(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.containers")
-                || ((claim.allowBuild(e.getPlayer(), Material.GRASS_BLOCK) == null || claim.allowBreak(e.getPlayer(), Material.GRASS_BLOCK) == null))
-                || (claim.allowAccess(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.access"))
-                || (((claim.allowBuild(e.getPlayer(), Material.GRASS_BLOCK) == null || claim.allowBreak(e.getPlayer(), Material.GRASS_BLOCK) == null))
-                && plugin.getConfig().getBoolean("settings.claim permissions to check.block"))
-                || (claim.allowGrantPermission(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.permission")))
+        if (claim.allowContainers(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.containers"))
+            return;
+
+        if (claim.allowAccess(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.access"))
+            return;
+
+        if ((claim.allowBuild(e.getPlayer(), Material.GRASS_BLOCK) == null || claim.allowBreak(e.getPlayer(), Material.GRASS_BLOCK) == null) && plugin.getConfig().getBoolean("settings.claim permissions to check.block"))
+            return;
+
+        if (claim.allowGrantPermission(e.getPlayer()) == null && plugin.getConfig().getBoolean("settings.claim permissions to check.permission"))
             return;
 
         // Asks the config if it should teleport the player to the edge of the claim, if not it will teleport the player to where they were
