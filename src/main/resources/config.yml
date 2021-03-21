@@ -1,0 +1,38 @@
+settings:
+
+  # This is where you can set some custom variables to use in messages sent to players,
+  # Each custom variable must have a : between the placeholder and the information that will be sent
+  custom variables:
+    - "plugin prefix: &d&lGPAE&d >&f"
+
+  # If you do not wish to have any commands executed after a player attempts to move into a claim,
+  # leave this field empty. Any commands may use custom variables but there is no reason to add a /
+  # to disable:
+  # commands to execute: []
+  commands to execute: []
+
+  # This message will be sent to the player each time they attempt to enter a claim
+  # Set this to an empty string if you wish to turn this feature off
+  # message: ""
+  message: "{plugin prefix} &cYou must be trusted to enter {owner}'s claim!"
+
+  # If a player has this permission, they will be able to enter the claim without being haulted.
+  # If you wish to disable this feature set it to an empty string
+  # permission: ""
+  permission: "GPAE.entry"
+
+  # By default this is disabled, but if you wish to prevent players from entering admin claims
+  # set this to true, otherwise leave this false
+  ignore admin claims: false
+
+  # If you wish to disable certain claim permissions from being checked, set them to false
+  # This is what we rely on to check to see if a player is trusted in an area
+  claim permissions to check:
+    containers: true
+    access: true
+    block: true
+    permission: true
+
+  # If you wish to teleport the player to the border of a claim, keep this enabled,
+  # if you set this to false they will be teleported to the position before their movement
+  teleport player to edge of claim: true

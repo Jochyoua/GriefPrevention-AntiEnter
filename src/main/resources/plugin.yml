@@ -1,0 +1,7 @@
+name: GPAE
+main: io.github.jochyoua.griefpreventionantienter.GPAE
+version: 1.0
+description: simple no go into claim
+authors: [Jochyoua]
+api-version: 1.13
+softdepend: [GriefPrevention]
