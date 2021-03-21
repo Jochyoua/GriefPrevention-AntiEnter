@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Arrays;
 import java.util.List;
 
-public class GPAE extends JavaPlugin {
+public class GriefPreventionAntiEnter extends JavaPlugin {
 
     @Override
     public void onEnable() {

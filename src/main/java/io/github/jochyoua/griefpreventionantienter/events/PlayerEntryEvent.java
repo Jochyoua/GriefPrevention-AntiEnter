@@ -1,6 +1,6 @@
 package io.github.jochyoua.griefpreventionantienter.events;
 
-import io.github.jochyoua.griefpreventionantienter.GPAE;
+import io.github.jochyoua.griefpreventionantienter.GriefPreventionAntiEnter;
 import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import org.bukkit.Bukkit;
@@ -12,12 +12,12 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import java.util.Objects;
 
 public class PlayerEntryEvent implements Listener {
-    private final GPAE plugin;
+    private final GriefPreventionAntiEnter plugin;
 
 
     // This is the constructor, this is where we dependency inject the main class
     // into this class so we may access information from the main class
-    public PlayerEntryEvent(GPAE plugin) {
+    public PlayerEntryEvent(GriefPreventionAntiEnter plugin) {
         this.plugin = plugin;
     }
 

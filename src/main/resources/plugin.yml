@@ -1,5 +1,5 @@
 name: GPAE
-main: io.github.jochyoua.griefpreventionantienter.GPAE
+main: io.github.jochyoua.griefpreventionantienter.GriefPreventionAntiEnter
 version: 1.0
 description: simple no go into claim
 authors: [Jochyoua]
